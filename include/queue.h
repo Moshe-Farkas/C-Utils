@@ -10,7 +10,7 @@ typedef struct {
 } queue_t;
 
 void initQueue(queue_t* q);
-Value popQueue(queue_t* q);
-void addQueue(queue_t* q, Value value);
-int queueCount(queue_t* q);
+Value deqeue(queue_t* q);
+void enqueue(queue_t* q, Value value);
+int queueSize(queue_t* q);
 void printQueue(queue_t* q);
