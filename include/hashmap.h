@@ -1,16 +1,18 @@
-#include <stdbool.h>
+#pragma once
 
-typedef int entry;
+#include <stdbool.h>
+#include "node.h"
+#include "value.h"
 
 typedef struct {
     int count;
     int capacity;
-    entry* entries;
+    node_t* entries;
 } HashMap;
 
 void initNewHashMap(HashMap* map);
 void freeHashMap(HashMap* map);
-void mapPut(HashMap* map, char* key, entry* value);
-entry* mapGet(HashMap* map, char* key);
+void mapPut(HashMap* map, char* key, Value* value);
+Value* mapGet(HashMap* map, char* key);
 bool mapHas(HashMap* map, char* key);
 void printHashMap(HashMap* map);

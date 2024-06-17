@@ -16,6 +16,6 @@ void printHashMap(HashMap* map) {
     printf("map capacity: %d\n", map->capacity);
 }
 
-void mapPut(HashMap* map, char* key, entry* value) {
+void mapPut(HashMap* map, char* key, Value* value) {
     map->count++;
 }
